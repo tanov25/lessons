@@ -124,7 +124,7 @@ class TestLinkedList(unittest.TestCase):
 
     def test_find_all(self):
         l = LinkedList()
-        nodes = [Node(0) for i in range(0, 15)]
+        nodes = [Node(0) for _ in range(0, 15)]
         for node in nodes:
             l.insert(node, node)
         nodes_copy = l.find_all(0)
@@ -208,7 +208,7 @@ class TestLinkedList(unittest.TestCase):
 
     def test_delete4(self):
         l = LinkedList()
-        for i in range(0, 10):
+        for _ in range(0, 10):
             l.add_in_tail(Node(0))
         l.delete(0, True)
         self.assertEqual(l.len(), 0)
@@ -217,7 +217,7 @@ class TestLinkedList(unittest.TestCase):
 
     def test_delete5(self):
         l = LinkedList()
-        for i in range(0, 10):
+        for _ in range(0, 10):
             l.add_in_tail(Node(0))
         l.add_in_tail(Node(1))
         l.delete(0, True)
